@@ -1,75 +1,17 @@
-# React + TypeScript + Vite
+# MinecraftSounds
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**[ウェブサイトへ](https://nato-git.github.io/MinecraftSounds/)**  
+このサイトはマインクラフト統合版のサウンドの名前とその種類をまとめたものです。  
+Pythonを使ってマインクラフト公式のGithubからJsonファイルを取得し、表示しています。
 
-Currently, two official plugins are available:
+## 使用した言語、技術
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Pythonでデータの取得を行い、React、Typescript、TailWindCSSでサイトの処理に関することを実行しています。
 
-## React Compiler
+## 機能
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+サウンドをクリックするとクリップボードにそのサウンド名がコピーされます。また、種類ごとに検索することができます。
 
-## Expanding the ESLint configuration
+## 開発経緯
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+マインクラフト統合版でplaysoundのサウンドについて検索する際に毎回探し方に困っており、せっかくなら自分で作成しようと思いました。また、少し前にReactについて学んだため、実際に何か作成しようと思い、Reactを使用して作成しました。
