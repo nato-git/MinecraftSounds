@@ -89,7 +89,7 @@ const App = () => {
             <label key={s[2]}>
               <button onClick={copyClipboard} type="button" className="hidden">{s[1]}</button>
             <div
-              className="m-6 border-3 border-violet-500 rounded-sm p-2 text-lg flex justify-between text-white cursor-pointer"
+              className="m-6 border-3 border-violet-500 rounded-sm p-2 text-lg flex justify-between text-white cursor-pointer hover:bg-gray-800"
               key={s[2]}
             >
               <span className="mx-2 font-semibold">
