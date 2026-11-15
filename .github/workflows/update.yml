@@ -25,11 +25,11 @@ jobs:
                 pip install requests
 
             - name: スクレイピングを実行
-              run: python update.py
+              run: python src/update.py
 
             - name: 更新されたデータをコミットしてPush
               run: |
                 git config --local user.email "action@github.com"
                 git config --local user.name "GitHub Action"
-                git add sounds.json
+                git add src/sounds.json
                 git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update plugins data" && git push)
